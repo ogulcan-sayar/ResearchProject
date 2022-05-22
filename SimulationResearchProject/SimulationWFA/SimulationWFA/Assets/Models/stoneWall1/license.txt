@@ -1,0 +1,11 @@
+Model Information:
+* title:	Stone Wall 2
+* source:	https://sketchfab.com/3d-models/stone-wall-2-cc323f97bef549b3a8f2133580d158c5
+* author:	Cavalqs (https://sketchfab.com/Cavalqs)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Stone Wall 2" (https://sketchfab.com/3d-models/stone-wall-2-cc323f97bef549b3a8f2133580d158c5) by Cavalqs (https://sketchfab.com/Cavalqs) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

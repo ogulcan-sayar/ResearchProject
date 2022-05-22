@@ -1,0 +1,16 @@
+D:\SimulationResearchProject\SimulationResearchProject\SimulationWFA\SimulationWFA\bin\x64\Debug\SimulationWFA.exe.config
+D:\SimulationResearchProject\SimulationResearchProject\SimulationWFA\SimulationWFA\bin\x64\Debug\SimulationWFA.exe
+D:\SimulationResearchProject\SimulationResearchProject\SimulationWFA\SimulationWFA\bin\x64\Debug\SimulationWFA.pdb
+D:\SimulationResearchProject\SimulationResearchProject\SimulationWFA\SimulationWFA\bin\x64\Debug\aa-ER\SimulationWFA.resources.dll
+D:\SimulationResearchProject\SimulationResearchProject\SimulationWFA\SimulationWFA\obj\x64\Debug\SimulationWFA.Properties.Resources.resources
+D:\SimulationResearchProject\SimulationResearchProject\SimulationWFA\SimulationWFA\obj\x64\Debug\SimulationWFA.csproj.GenerateResource.cache
+D:\SimulationResearchProject\SimulationResearchProject\SimulationWFA\SimulationWFA\obj\x64\Debug\SimulationWFA.csproj.CoreCompileInputs.cache
+D:\SimulationResearchProject\SimulationResearchProject\SimulationWFA\SimulationWFA\obj\x64\Debug\aa-ER\SimulationWFA.resources.dll
+D:\SimulationResearchProject\SimulationResearchProject\SimulationWFA\SimulationWFA\obj\x64\Debug\SimulationWFA.exe
+D:\SimulationResearchProject\SimulationResearchProject\SimulationWFA\SimulationWFA\obj\x64\Debug\SimulationWFA.pdb
+D:\SimulationResearchProject\SimulationResearchProject\SimulationWFA\SimulationWFA\obj\x64\Debug\SimulationWFA.csproj.AssemblyReference.cache
+D:\SimulationResearchProject\SimulationResearchProject\SimulationWFA\SimulationWFA\obj\x64\Debug\SimulationWFA.SimulationProject.resources
+D:\SimulationResearchProject\SimulationResearchProject\SimulationWFA\SimulationWFA\obj\x64\Debug\SimulationWFA.SimulationProject.aa-ER.resources
+D:\SimulationResearchProject\SimulationResearchProject\SimulationWFA\SimulationWFA\bin\x64\Debug\Newtonsoft.Json.dll
+D:\SimulationResearchProject\SimulationResearchProject\SimulationWFA\SimulationWFA\bin\x64\Debug\Newtonsoft.Json.xml
+D:\SimulationResearchProject\SimulationResearchProject\SimulationWFA\SimulationWFA\obj\x64\Debug\SimulationWFA.csproj.CopyComplete

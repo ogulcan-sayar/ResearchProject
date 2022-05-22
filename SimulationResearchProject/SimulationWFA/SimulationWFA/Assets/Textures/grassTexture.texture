@@ -1,0 +1,23 @@
+{
+  "uniqueFileID": "ac77d14d-00dc-4189-b2c2-bedb64edadcf",
+  "stringStringSerializedDic": {
+    "ImageName": "grass.png"
+  },
+  "stringIntSerializedDic": {
+    "TextureMappingType": 1,
+    "WrapSParameter": 33071,
+    "WrapTParameter": 33071
+  },
+  "stringFloatSerializedDic": {},
+  "stringBoolSerializedDic": {},
+  "stringLongSerializedDic": {},
+  "stringStringListSerializedDic": {},
+  "stringIntListSerializedDic": {},
+  "stringFloatListSerializedDic": {},
+  "stringLongListSerializedDic": {},
+  "stringBoolListSerializedDic": {},
+  "stringToStringStringSerializedDic": {},
+  "stringToStringIntSerializedDic": {},
+  "stringToStringFloatSerializedDic": {},
+  "stringToStringBoolSerializedDic": {}
+}

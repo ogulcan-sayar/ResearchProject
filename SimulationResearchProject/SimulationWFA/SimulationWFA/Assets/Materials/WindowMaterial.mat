@@ -1,0 +1,31 @@
+{
+  "uniqueFileID": "fac25a1d-b828-4a17-b24d-a51d6191a855",
+  "stringStringSerializedDic": {
+    "TextureFileID": "47e6289a-ff9b-4a2a-9570-c82e7975d976"
+  },
+  "stringIntSerializedDic": {
+    "MaterialType": 1,
+    "ShaderType": 1
+  },
+  "stringFloatSerializedDic": {},
+  "stringBoolSerializedDic": {
+    "Transparent": true
+  },
+  "stringLongSerializedDic": {},
+  "stringStringListSerializedDic": {},
+  "stringIntListSerializedDic": {},
+  "stringFloatListSerializedDic": {
+    "Color": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  "stringLongListSerializedDic": {},
+  "stringBoolListSerializedDic": {},
+  "stringToStringStringSerializedDic": {},
+  "stringToStringIntSerializedDic": {},
+  "stringToStringFloatSerializedDic": {},
+  "stringToStringBoolSerializedDic": {}
+}

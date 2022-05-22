@@ -1,0 +1,8 @@
+{
+  "speed": 10.0,
+  "turnSpeed": 3.0,
+  "turnDst": 0.5,
+  "stoppingDst": 3.0,
+  "add": true,
+  "type": "SimulationWFA.SimulationAlgorithms.AStar.UnitSerialized, SimulationWFA, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+}

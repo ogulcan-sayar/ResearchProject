@@ -1,0 +1,12 @@
+{
+  "velocity": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+  },
+  "mass": 1.0,
+  "drag": 0.05,
+  "useGravity": true,
+  "add": true,
+  "type": "ECSEntegration.SerializedComponent.ParticleSerialized, SimulationWFA, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+}

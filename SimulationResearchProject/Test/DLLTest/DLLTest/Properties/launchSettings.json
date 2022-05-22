@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "DLLTest": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    }
+  }
+}

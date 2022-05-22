@@ -1,0 +1,15 @@
+get_source(RDRP_SOURCE_FILES RDRP_HEADER_FILES)
+
+SET (CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/../CMake")
+
+get_property(GLFW GLOBAL PROPERTY GLFW)
+get_property(GLSRC GLOBAL PROPERTY GLSRC)
+get_property(STB GLOBAL PROPERTY STB)
+get_property(ASSIMP GLOBAL PROPERTY ASSIMP)
+
+ADD_LIBRARY(RenderProgram STATIC ${RDRP_SOURCE_FILES} ${RDRP_HEADER_FILES} ${STB} ${GLSRC})
+
+include_directories("${CMAKE_SOURCE_DIR}/CommonLibraries/include")
+include_directories(include)
+
+TARGET_LINK_LIBRARIES(RenderProgram PUBLIC ${GLFW} ${ASSIMP} ${GLM_LIBRARIES})

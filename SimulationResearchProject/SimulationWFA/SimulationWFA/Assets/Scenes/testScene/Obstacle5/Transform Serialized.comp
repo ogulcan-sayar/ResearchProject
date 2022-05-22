@@ -1,0 +1,19 @@
+{
+  "pos": {
+    "X": 7.0,
+    "Y": 1.5,
+    "Z": -5.0
+  },
+  "scale": {
+    "X": 1.0,
+    "Y": 0.4,
+    "Z": 0.8
+  },
+  "rotation": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+  },
+  "add": true,
+  "type": "TheSimulation.SerializedComponent.TransformSerialized, SimulationWFA, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+}

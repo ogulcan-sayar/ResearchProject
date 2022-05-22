@@ -1,0 +1,12 @@
+get_source(DLL_SOURCE_FILES DLL_HEADER_FILES)
+
+SET (CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/../CMake")
+
+include_directories("${CMAKE_SOURCE_DIR}/RenderProgram/include")
+include_directories("${CMAKE_SOURCE_DIR}/CommonLibraries/include")
+
+ADD_LIBRARY(RenderProgramDLL SHARED ${DLL_SOURCE_FILES} ${DLL_HEADER_FILES})
+TARGET_LINK_LIBRARIES(RenderProgramDLL PUBLIC RenderProgram)
+
+
+INSTALL(TARGETS RenderProgramDLL RUNTIME DESTINATION ${DLL_INSTALL_FOLDER})

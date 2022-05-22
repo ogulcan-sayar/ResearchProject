@@ -1,0 +1,22 @@
+
+
+Karşılaşılan Hatalar ve Kurulum Notları
+*assimp.dll bulunamadı hatası için ---> build klasörü içerisindeki tester klasörüne CommonLibrary içerisindeki assimp dll'i kopyalanacak. (Bunu güzel bir hale getir)
+
+
+
+--------------------------
+Genel Notlar
+*opengl dll çıkartılacak
+*play buttonu basıldığı zaman opengl ilk ekranı gelecek
+*opengl editor ekranı editör penceresine gömülü olacak
+*ecs temelini
+*inspector, hiyerarşi 
+
+
+
+OSMAN
+
+mesh setup her setup için üzerine mi biriktiyor yoksa ilk silip sonra mı ekliyor ? (mesh.clear fonksiyonu mu çağırılmalı) ? 
+
+lookat dll fonksiyonu kötü yazılmış

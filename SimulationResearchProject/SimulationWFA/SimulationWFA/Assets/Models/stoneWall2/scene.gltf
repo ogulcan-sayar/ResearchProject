@@ -1,0 +1,349 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 12720,
+      "max": [
+        0.6851916313171387,
+        0.19987206161022186,
+        3.2150113582611084
+      ],
+      "min": [
+        -1.4679186344146729,
+        -3.1142661571502686,
+        -4.892606735229492
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 152640,
+      "componentType": 5126,
+      "count": 12720,
+      "max": [
+        0.9999474883079529,
+        0.9999829530715942,
+        0.9999528527259827
+      ],
+      "min": [
+        -0.999982476234436,
+        -0.9998986124992371,
+        -0.9998555779457092
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 12720,
+      "max": [
+        0.9999824166297913,
+        0.9986989498138428,
+        0.9734836220741272,
+        1.0
+      ],
+      "min": [
+        -0.9981929659843445,
+        -0.9995089769363403,
+        -0.9999467134475708,
+        -1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 12720,
+      "max": [
+        1.2297850847244263,
+        1.2123452425003052
+      ],
+      "min": [
+        -0.19349682331085205,
+        -0.5477582812309265
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 101760,
+      "componentType": 5126,
+      "count": 12720,
+      "max": [
+        4.517532825469971,
+        4.516699314117432
+      ],
+      "min": [
+        -3.426980495452881,
+        -3.4270150661468506
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 203520,
+      "componentType": 5126,
+      "count": 12720,
+      "max": [
+        1.2297850847244263,
+        1.2123452425003052
+      ],
+      "min": [
+        -0.19349682331085205,
+        -0.5477582812309265
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 305280,
+      "componentType": 5126,
+      "count": 12720,
+      "max": [
+        1.2297850847244263,
+        1.2123452425003052
+      ],
+      "min": [
+        -0.19349682331085205,
+        -0.5477582812309265
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 407040,
+      "componentType": 5126,
+      "count": 12720,
+      "max": [
+        1.2297850847244263,
+        1.2123452425003052
+      ],
+      "min": [
+        -0.19349682331085205,
+        -0.5477582812309265
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 19080,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "Elliot_Lisenkov (https://sketchfab.com/elliotfox)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/rocky-stone-block-8e87a488542846379ee931011dc964a2",
+      "title": "Rocky stone block"
+    },
+    "generator": "Sketchfab-12.68.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 76320,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 508800,
+      "byteOffset": 76320,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 305280,
+      "byteOffset": 585120,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 203520,
+      "byteOffset": 890400,
+      "byteStride": 16,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 1093920,
+      "uri": "scene.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "textures/rock_wall_1_baseColor.png"
+    },
+    {
+      "uri": "textures/rock_wall_1_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/rock_wall_1_normal.png"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "rock_wall_1",
+      "normalTexture": {
+        "index": 2
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicFactor": 0.0,
+        "metallicRoughnessTexture": {
+          "index": 1
+        }
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Object_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3,
+            "TEXCOORD_1": 4,
+            "TEXCOORD_2": 5,
+            "TEXCOORD_3": 6,
+            "TEXCOORD_4": 7
+          },
+          "indices": 8,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "name": "root"
+    },
+    {
+      "children": [
+        3
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        1.0,
+        0.0,
+        0.0,
+        -1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "GLTF_SceneRootNode"
+    },
+    {
+      "children": [
+        4
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        1.3897669315338135,
+        4.911020755767822,
+        8.806081771850586,
+        1.0
+      ],
+      "name": "Cube_cell_0"
+    },
+    {
+      "mesh": 0,
+      "name": "Object_4"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    }
+  ]
+}

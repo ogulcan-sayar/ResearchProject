@@ -1,0 +1,341 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CE36F29A-2501-4781-9431-AD340AA6052C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SimulationWFA</RootNamespace>
+    <AssemblyName>SimulationWFA</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ComponentPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataManagement\ISerializationCallbackReceiver.cs" />
+    <Compile Include="DataManagement\SerializedDictionary.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HierarchySimButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MespSimulationSystem\Math\MathFunctions.cs" />
+    <Compile Include="MespSimulationSystem\Math\Matrix.cs" />
+    <Compile Include="MespSimulationSystem\Math\VectorExtensions.cs" />
+    <Compile Include="MespSimulationSystem\PhysicLibrary\Bounds.cs" />
+    <Compile Include="MespSimulationSystem\PhysicLibrary\BoxBounds.cs" />
+    <Compile Include="MespSimulationSystem\PhysicLibrary\BoxCollider.cs" />
+    <Compile Include="MespSimulationSystem\PhysicLibrary\Collider.cs" />
+    <Compile Include="MespSimulationSystem\PhysicLibrary\Contact.cs" />
+    <Compile Include="MespSimulationSystem\PhysicLibrary\ContactResolver.cs" />
+    <Compile Include="MespSimulationSystem\PhysicLibrary\DragForceGenerator.cs" />
+    <Compile Include="MespSimulationSystem\PhysicLibrary\GravityForceGenerator.cs" />
+    <Compile Include="MespSimulationSystem\PhysicLibrary\Physics.cs" />
+    <Compile Include="MespSimulationSystem\PhysicLibrary\Particle.cs" />
+    <Compile Include="MespSimulationSystem\PhysicLibrary\Ray.cs" />
+    <Compile Include="MespSimulationSystem\PhysicLibrary\SphereBounds.cs" />
+    <Compile Include="MespSimulationSystem\PhysicLibrary\SphereCollider.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\ECSEntegration\SerializedComponentPool.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\ECSEntegration\SerializedComponent\BoxColliderSerialized.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\ECSEntegration\SerializedComponent\CameraSerialized.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\ECSEntegration\SerializedComponent\DirectionalLightSerialized.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\ECSEntegration\SerializedComponent\FPSDisplaySerialized.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\ECSEntegration\SerializedComponent\PointLightSerialized.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\ECSEntegration\SerializedComponent\ParticleSerialized.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\ECSEntegration\SerializedComponent\SkinnedMeshSerialized.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\ECSEntegration\SerializedComponent\SpotLightSerialized.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\ECSEntegration\SerializedComponent\TestSystemSerialized.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\ECSEntegration\SerializedComponent\TextRendererSerialized.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\ECSEntegration\SerializedComponent\TriggerSerialized.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\EditorWindowSystem\EditorWindowSystem\RotateCameraSystem.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\EditorWindowSystem\MespEventManager.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\EditorWindowSystem\EditorWindowSystem\ECSEditorController.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\EditorWindowSystem\EditorWindowSystem\EditorWindowSystem.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\EditorWindowSystem\SharedData\ModelPaths.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\EditorWindowSystem\SharedData\TextureReferences.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\ECSEntegration\SerializedComponent\MeshRendererSerialized.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\MespDebug.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\SimPath.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\SimulationSystem\ECSComponents\AnimatorComp.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\SimulationSystem\ECSComponents\ColliderComp.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\SimulationSystem\ECSComponents\CameraComp.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\SimulationSystem\ECSComponents\CanMoveTestTag.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\SimulationSystem\ECSComponents\ContactHolderComp.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\SimulationSystem\ECSComponents\ContactResolverComp.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\SimulationSystem\ECSComponents\DebugNameComp.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\SimulationSystem\ECSComponents\DirectionalLightComp.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\SimulationSystem\ECSComponents\FPSDisplayerComp.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\SimulationSystem\ECSComponents\OnExitTriggerComp.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\SimulationSystem\ECSComponents\OnTriggerEnterComp.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\SimulationSystem\ECSComponents\OutlineBorderRenderComp.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\SimulationSystem\ECSComponents\PointLightComp.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\SimulationSystem\ECSComponents\ParticleComp.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\SimulationSystem\ECSComponents\SkinnedMeshRendererComp.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\SimulationSystem\ECSComponents\SpotLightComp.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\SimulationSystem\ECSComponents\TestSystemComp.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\SimulationSystem\ECSComponents\TextRendererComp.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\SimulationSystem\ECSComponents\TransformPositionArrowComp.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\SimulationSystem\ECSComponents\TriggerComp.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\SimulationSystem\ECSSystem\AnimationSystem.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\SimulationSystem\ECSSystem\ClearColorTestSystem.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\SimulationSystem\ECSSystem\ColliderBoundsUpdateSystem.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\SimulationSystem\ECSSystem\CollisionDetectionSystem.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\SimulationSystem\ECSSystem\EditorTransformSyncSystem.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\SimulationSystem\ECSSystem\SkyboxRenderSystem.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\SimulationSystem\ECSSystem\EditorCameraSystem.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\SimulationSystem\ECSSystem\EditorEventListenSystem.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\SimulationSystem\ECSSystem\EditorInfiniteGridSystem.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\SimulationSystem\ECSSystem\EditorLoadingSystem.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\SimulationSystem\ECSSystem\EditorObjectDesignerSystem.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\SimulationSystem\ECSSystem\FPSCalculatorSystem.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\SimulationSystem\ECSSystem\InputSystem.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\SimulationSystem\ECSSystem\LightSystem.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\SimulationSystem\ECSSystem\MeshRenderSystem.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\SimulationSystem\ECSSystem\MespEditorDebugSystem.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\SimulationSystem\ECSSystem\OutlineBorderRenderSystem.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\SimulationSystem\ECSSystem\ParticleMovementSystem.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\SimulationSystem\ECSSystem\PhysicTestSystem.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\SimulationSystem\ECSSystem\RaycastTestSystem.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\SimulationSystem\ECSSystem\ResolveCollisionSystem.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\SimulationSystem\ECSSystem\RotationTestSystem.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\SimulationSystem\ECSSystem\SceneConfigurationSystemTest.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\SimulationSystem\ECSSystem\SceneSelectObjectSystem.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\SimulationSystem\ECSSystem\SimulationPhysicEntegrationSystem.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\SimulationSystem\ECSSystem\TestSystem.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\SimulationSystem\ECSSystem\TextRendererSystem.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\SimulationSystem\ECSSystem\TransformSystem.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\SimulationSystem\ECSSystem\TriggerDetectionSystem.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\SimulationSystem\ECSSystem\TriggerTestSystem.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\SimulationSystem\ECSSystem\UpdateForceSystem.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\SimulationSystem\Time.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\SimulationSystem\Timer.cs" />
+    <Compile Include="MespSimulationSystem\RenderLibrary\Animations\Animation.cs" />
+    <Compile Include="MespSimulationSystem\RenderLibrary\Animations\Animator.cs" />
+    <Compile Include="MespSimulationSystem\RenderLibrary\Graphics\LineRenderer.cs" />
+    <Compile Include="MespSimulationSystem\RenderLibrary\Graphics\PreparedModels\DirectionArrowMesh.cs" />
+    <Compile Include="MespSimulationSystem\RenderLibrary\Graphics\PreparedModels\QuadPlane.cs" />
+    <Compile Include="MespSimulationSystem\RenderLibrary\Graphics\RenderData\Model.cs" />
+    <Compile Include="MespSimulationSystem\RenderLibrary\Graphics\Rendering\Cubemap.cs" />
+    <Compile Include="MespSimulationSystem\RenderLibrary\Graphics\TextRenderer.cs" />
+    <Compile Include="MespSimulationSystem\RenderLibrary\OpenGLFunctions\OpenGLFunctions.cs" />
+    <Compile Include="MespSimulationSystem\RenderLibrary\Shaders\ShaderPool.cs" />
+    <Compile Include="MespUtils\AssetOrganizer.cs" />
+    <Compile Include="MespUtils\AssetUtils\AssetUtils.cs" />
+    <Compile Include="MespUtils\AssetSerializationData.cs" />
+    <Compile Include="MespUtils\AssetUtils\TempSerializedData.cs" />
+    <Compile Include="MespUtils\ListExtensions.cs" />
+    <Compile Include="MespUtils\SceneManager.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\ECS\BitSet.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\ECS\ComponentIdx.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\ECS\ComponentPool.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\ECS\DTime.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\ECS\DynamicArray.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\ECSEntegration\SerializedComponent.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\ECS\Entity.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\ECS\EntityComponentList.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\ECS\EntityData.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\ECS\Filter.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\ECS\FilterList.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\ECS\FilterMap.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\ECS\FilterMask.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\ECS\System.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\ECS\SystemManager.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\ECS\UniqueIdDic.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\ECS\World.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\SimulationSystem\EasyECSController.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\SimulationSystem\ECSComponents\MeshRendererComp.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\SimulationSystem\ECSComponents\TransformComp.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\ECSEntegration\SerializedComponent\TransformSerialized.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\ECSEntegration\SimObject.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\SimulationSystem\WindowEcsManager.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\SimulationSystem\SimulationWindowSystem\ECSSimulationController.cs" />
+    <Compile Include="MespSimulationSystem\ProgramLibrary\SimulationSystem\SimulationWindowSystem\SimulationSystem.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MespSimulationSystem\RenderLibrary\Graphics\MeshRenderer.cs" />
+    <Compile Include="MespSimulationSystem\RenderLibrary\Graphics\ModelLoader.cs" />
+    <Compile Include="MespSimulationSystem\RenderLibrary\Graphics\PreparedModels\CubeMesh.cs" />
+    <Compile Include="MespSimulationSystem\RenderLibrary\Graphics\PreparedModels\Lamp.cs" />
+    <Compile Include="MespSimulationSystem\RenderLibrary\Graphics\RenderData\GeneralVertexData.cs" />
+    <Compile Include="MespSimulationSystem\RenderLibrary\Graphics\RenderData\Mesh.cs" />
+    <Compile Include="MespSimulationSystem\RenderLibrary\Graphics\Rendering\Lights.cs" />
+    <Compile Include="MespSimulationSystem\RenderLibrary\Graphics\Rendering\LitMaterial.cs" />
+    <Compile Include="MespSimulationSystem\RenderLibrary\Graphics\Rendering\Material.cs" />
+    <Compile Include="MespSimulationSystem\RenderLibrary\Graphics\Rendering\Shader.cs" />
+    <Compile Include="MespSimulationSystem\RenderLibrary\Graphics\Rendering\Texture.cs" />
+    <Compile Include="MespSimulationSystem\RenderLibrary\Graphics\Rendering\UnlitMaterial.cs" />
+    <Compile Include="MespSimulationSystem\RenderLibrary\IO\Input.cs" />
+    <Compile Include="MespSimulationSystem\RenderLibrary\IO\Screen.cs" />
+    <Compile Include="MespSimulationSystem\RenderLibrary\RenderProgramDLL.cs" />
+    <Compile Include="MespSimulationSystem\RenderLibrary\Transform.cs" />
+    <Compile Include="RemoveComponentButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ResetButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SerializedEditor.cs" />
+    <Compile Include="SerializedEditorClasses\BoxColliderSerializedEditor.cs" />
+    <Compile Include="SerializedEditorClasses\CameraSerializedEditor.cs" />
+    <Compile Include="SerializedEditorClasses\DirectionalLightSerializedEditor.cs" />
+    <Compile Include="SerializedEditorClasses\MeshRendererSerializedEditor.cs" />
+    <Compile Include="SerializedEditorClasses\ObstacleSerializedEditor.cs" />
+    <Compile Include="SerializedEditorClasses\ParticleSystemSerializedEditor.cs" />
+    <Compile Include="SerializedEditorClasses\PointLightSerializedEditor.cs" />
+    <Compile Include="SerializedEditorClasses\SerializedEditorAbstract.cs" />
+    <Compile Include="SerializedEditorClasses\SkinnedMeshSerializedEditor.cs" />
+    <Compile Include="SerializedEditorClasses\SpotLightSerializedEditor.cs" />
+    <Compile Include="SerializedEditorClasses\TargetSerializedEditor.cs" />
+    <Compile Include="SerializedEditorClasses\TextRendererSerializedEditor.cs" />
+    <Compile Include="SerializedEditorClasses\TransformSerializedEditor.cs" />
+    <Compile Include="SerializedEditorClasses\TriggerSerializedEditor.cs" />
+    <Compile Include="SerializedEditorClasses\UnitSerializedEditor.cs" />
+    <Compile Include="ShowCinematic\CameraRotateSystem.cs" />
+    <Compile Include="ShowCinematic\RotateCameraComp.cs" />
+    <Compile Include="ShowCinematic\ShowMespNameComp.cs" />
+    <Compile Include="ShowCinematic\ShowPositionComp.cs" />
+    <Compile Include="ShowCinematic\SleepingModeSystem.cs" />
+    <Compile Include="SimTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SimulationAlgorithms\AStar\Grid.cs" />
+    <Compile Include="SimulationAlgorithms\AStar\GridComp.cs" />
+    <Compile Include="SimulationAlgorithms\AStar\GridSystem.cs" />
+    <Compile Include="SimulationAlgorithms\AStar\Heap.cs" />
+    <Compile Include="SimulationAlgorithms\AStar\Line.cs" />
+    <Compile Include="SimulationAlgorithms\AStar\Node.cs" />
+    <Compile Include="SimulationAlgorithms\AStar\ObstacleComp.cs" />
+    <Compile Include="SimulationAlgorithms\AStar\ObstacleUpdateSystem.cs" />
+    <Compile Include="SimulationAlgorithms\AStar\Path.cs" />
+    <Compile Include="SimulationAlgorithms\AStar\AStar.cs" />
+    <Compile Include="SimulationAlgorithms\AStar\PathRequestManager.cs" />
+    <Compile Include="SimulationAlgorithms\AStar\StartPathFollowComp.cs" />
+    <Compile Include="SimulationAlgorithms\AStar\TargetComp.cs" />
+    <Compile Include="SimulationAlgorithms\AStar\UnitComp.cs" />
+    <Compile Include="SimulationAlgorithms\AStar\UnitFollowPathComp.cs" />
+    <Compile Include="SimulationAlgorithms\AStar\UnitFollowPathSystem.cs" />
+    <Compile Include="SimulationAlgorithms\AStar\UnitPathFindSystem.cs" />
+    <Compile Include="SimulationAlgorithms\AStar\VisualizeShortestPathAlgorithmSystem.cs" />
+    <Compile Include="SimulationAlgorithms\AStar\VisualizeShortestPathComp.cs" />
+    <Compile Include="SimulationAlgorithms\CustomAlgorithm\Custom.cs" />
+    <Compile Include="SimulationAlgorithms\BFS\BFS.cs" />
+    <Compile Include="SimulationAlgorithms\DFS\DFS.cs" />
+    <Compile Include="SimulationAlgorithms\Dijkstra\Dijkstra.cs" />
+    <Compile Include="SimulationAlgorithms\Prim%27s\Prims.cs" />
+    <Compile Include="SimulationAlgorithms\RestartUnitSystem.cs" />
+    <Compile Include="SimulationAlgorithms\ShortestPathAlgorithm.cs" />
+    <Compile Include="SimulationAlgorithms\UnitReturnPathComp.cs" />
+    <Compile Include="SimulationAlgorithms\UnitReturnPathSystem.cs" />
+    <EmbeddedResource Include="Form1.aa-ER.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

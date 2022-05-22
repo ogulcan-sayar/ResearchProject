@@ -1,0 +1,14 @@
+{
+  "size": {
+    "X": 5.0,
+    "Y": 2.0,
+    "Z": 2.0
+  },
+  "offset": {
+    "X": -0.6,
+    "Y": -0.3,
+    "Z": -1.0
+  },
+  "add": true,
+  "type": "TheSimulation.SerializedComponent.BoxColliderSerialized, SimulationWFA, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+}

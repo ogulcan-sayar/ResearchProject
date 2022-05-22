@@ -1,0 +1,81 @@
+{
+  "uniqueFileID": "08f4029f-59c6-43b4-989d-bcb04166cb35",
+  "stringStringSerializedDic": {},
+  "stringIntSerializedDic": {},
+  "stringFloatSerializedDic": {},
+  "stringBoolSerializedDic": {},
+  "stringLongSerializedDic": {},
+  "stringStringListSerializedDic": {},
+  "stringIntListSerializedDic": {
+    "Indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "stringFloatListSerializedDic": {
+    "VerticesPos": [
+      0.5,
+      0.5,
+      0.0,
+      -0.5,
+      -0.5,
+      0.0,
+      -0.5,
+      0.5,
+      0.0,
+      -0.5,
+      -0.5,
+      0.0,
+      0.5,
+      0.5,
+      0.0,
+      0.5,
+      -0.5,
+      0.0
+    ],
+    "VerticesNormal": [
+      0.0,
+      0.0,
+      -1.0,
+      0.0,
+      0.0,
+      -1.0,
+      0.0,
+      0.0,
+      -1.0,
+      0.0,
+      0.0,
+      -1.0,
+      0.0,
+      0.0,
+      -1.0,
+      0.0,
+      0.0,
+      -1.0
+    ],
+    "VerticesTexCoord": [
+      1.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      1.0,
+      1.0,
+      1.0,
+      0.0
+    ]
+  },
+  "stringLongListSerializedDic": {},
+  "stringBoolListSerializedDic": {},
+  "stringToStringStringSerializedDic": {},
+  "stringToStringIntSerializedDic": {},
+  "stringToStringFloatSerializedDic": {},
+  "stringToStringBoolSerializedDic": {}
+}

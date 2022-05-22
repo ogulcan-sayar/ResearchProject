@@ -1,0 +1,11 @@
+Model Information:
+* title:	Rocky stone block
+* source:	https://sketchfab.com/3d-models/rocky-stone-block-8e87a488542846379ee931011dc964a2
+* author:	Elliot_Lisenkov (https://sketchfab.com/elliotfox)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Rocky stone block" (https://sketchfab.com/3d-models/rocky-stone-block-8e87a488542846379ee931011dc964a2) by Elliot_Lisenkov (https://sketchfab.com/elliotfox) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

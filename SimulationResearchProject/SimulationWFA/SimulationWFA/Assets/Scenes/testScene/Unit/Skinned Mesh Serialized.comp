@@ -1,0 +1,5 @@
+{
+  "modelPath": "sphere\\scene.gltf",
+  "add": true,
+  "type": "TheSimulation.SerializedComponent.SkinnedMeshSerialized, SimulationWFA, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+}

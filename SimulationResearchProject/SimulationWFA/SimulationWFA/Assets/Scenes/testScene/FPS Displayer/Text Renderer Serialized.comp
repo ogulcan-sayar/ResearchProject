@@ -1,0 +1,15 @@
+{
+  "color": {
+    "X": 1.0,
+    "Y": 1.0,
+    "Z": 1.0
+  },
+  "UIPosition": {
+    "X": 0.0,
+    "Y": 500.0
+  },
+  "scale": 30.0,
+  "text": "FPS: ",
+  "add": true,
+  "type": "TheSimulation.SerializedComponent.TextRendererSerialized, SimulationWFA, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+}

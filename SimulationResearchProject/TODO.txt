@@ -1,0 +1,153 @@
+renderProgramdan çıkartılan dll içerisinde assimpin dll'ini göremiyor --> (bu sorun daha öncesinde opengl.dll'i system32 içerisine atılarak çözüldü güzel bir çözüm değil)
+	*cmake ile assimp.dll'in ana dllye bağlanması gerekiyor (aynı şekilde opengl.dll'de)
+	*ilk dll çıkartırken ki hatalar da glwf3.dll'den dolayı olabilir mi ? nasıl çözüldü ?
+
+renderprogramDLL manuel olarak atılmamalı ?
+
+
+*ECS
+	*entegresyon için kapatılan debug.assertleri daha sonrasında aç
+
+
+
+Camera
+------
+Camera renderlama layerları
+Camera hesaplamaları update içerisinde geçiyor titreme yaratır mı ?
+
+
+screen
+------
+800/600 ratiosu c# perspective fonksiyonunda manuel olarak veriliyor c++'tan verilmeli
+c++ dll kısmında Orthographic fonksiyonu içerisinde 800/600 ratiosu manuel verilmiş
+
+
+render
+------
+mesh zaten c++'ta tutuluyor. C++ meshRenderer diye bir classa gerek var mı ? onun yerine c++ render(mesh,transform,material) alan bir class olsa nasıl olur ?
+meshrenderer system içerisinde if(setmeshRenderer == false) -> bundan kurtul
+
+
+screen
+------
+screen fonksiyonları (opengl screen.setparameters içerisindeki) dll için parçalanabilir
+
+
+simobj
+------
+simobj ve entity ayrı mı olmalı ? yoksa aynı anda createlenebilir mi ?
+addcomponent, simobj için serailizedcomp list entegre çalışmıyor
+
+
+Material
+--------
+c++ materialleri neden texture vektörü tutuyor ? bir texturede birden fazla texture olabilir mi ? diffuse ve specular neden aynı listede ve onlar da 1 den fazla olabilir mi ?
+materiallere texture eklenebilir fakat çıkartılamaz ?
+modelload yaparken neden sadece lit material ekliyor ?
+
+
+texture
+-------
+textureler loadlanırken neden type alıyor ? -> lit materiale eklenirken type eklenmesi daha doğru çünkü texturenin typeı olmaz
+flip özelliği neden load içerisinde ? 
+
+
+camera
+------
+editor camerası için editorcameratag
+
+
+model loading
+------------
+trol modeli yüklenirken Microsoft C++ exception: DeadlyImportError at hatası veriyor
+
+
+
+unlit shader
+------------
+tek texture support ediyor
+
+
+lit shader
+----------
+tek texture support ediyor
+
+
+transparency
+------------
+çok sayıda nesne ile test edilmesi gerekiyor
+
+
+
+General
+-------
+editor refres metodu optimize değil tek bir entity için ayarla
+localpos sistemi
+
+
+assetCreator
+------------
+var olan asset varsa üzerine yazması engellendi
+(!) ileride guid eğer ki aynı idyi verirse patlama olabilir
+model için assetCreator
+modelden gelen material asset folderına dönüştürülmüyor bir yol bul ? (unity bunu nasıl çözmüş?)
+
+
+animations
+----------
+animasyonlar otomatik loopta 
+animasyon süresi bazen aşıyor assert hatası geliyor ?
+	* bazı keylerin maksimum süresi currenttimedan düşük kaldığı için oluyor. eğer yüksek gelirse key 0'ı geri döndürecek şekilde ayarlandı
+en fazla 100 kemik eklenebiliyor 
+transparent nesneler şu an animasyon yapamaz
+2 trolun saçları ekranın ortasında birleşiyor.
+	* bone influence sayısı küçük olduğu zaman bazı ağır olan weight değerleri kayboluyor onun için düşük olan weight değerleri göz ardı edildi
+animasyon sistemi optimize değil ! (önemli)
+
+
+animator
+-------
+tek animasyon alabiliyor state machine değil ?
+animator oluştururken neden hemen animasyon yüklemem gerekiyor ? 
+
+
+text render
+-----------
+renderlanan farklı bir objeyle aynı z düzlemine gelirse içinden geçme oluyor
+kelime aralıkları çok geniş uv'den alındığı için
+textrenderer clean up olmuyor
+
+line renderer
+------------
+gizmos için kullanılan line renderer optimizasyon açısından çok hatalı sürekli fpsyi düşürüyor
+gizmos collider görseli bir önceki framede kalıyor (duraklatıp frame boyunca bakıldığı zaman collision esnasında belli oluyor)
+
+
+physic system
+-----------
+physic engine yaylarda problemler var git gide aralık artıyor sert yaylar konusunu incele
+sphere collision check için distance hesaplanırken karesi tutulabilir (optimizasyon)
+anchored bungee force generator yapılabilir
+aabb - sphere collision
+
+
+raycast
+--------
+nesne ekranın sol veya sağına çok yakınsa cameradan atılan raycast doğru çalışmıyor
+
+
+OĞULCAN
+*******
+Serialized Comp buttonları(mesh, transform) visible false olup tekrar ürüyor. Aynı butondan devam etsin tekrar üremesin.
+Editör addcomponent button component panel e bağlı olmazsa iyi olur.
+Component panel kaydırılıp eklenirse total height değişmiş gibi ekliyor veya panel in starting point i.
+Add component remove component (patlıyor) ||1
+Serialized Componentler var entegre edilecek. ||1
+Add Object var Remove Object yok ||1
+Hierarchy de çocuk yapma
+Pause Oynat Frame Oynat Buttonu olcak. || 0
+Projects kısmı yerine sahneleri gösterme olcak.||0
+Algoritma seçme.
+Yeni Editor Sisteminde vector float karısık olan compların dizaynını düzelt. Reset ve text change sistemleri bozuk. 
+Editor remove componentten sonra UpdatePanelHeight metodu ile güncelle yeni konumları.
+Meshi olanların mesh componentinde add yerine var olan component yazsın.
